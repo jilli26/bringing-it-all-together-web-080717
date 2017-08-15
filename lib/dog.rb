@@ -93,32 +93,7 @@ def update
   WHERE id = ?
   SQL
 
-DB[:conn].execute(sql, self.name, self.breed, self.id) 
+DB[:conn].execute(sql, self.name, self.breed, self.id)
 end
-
-
-# def self.new_from_db(row)
-#   self.new.tap do |dog|
-#     dog.name = row[1]
-#     dog.breed = row[2]
-#     post.send("id=", row[0])
-#   end
-# end
-
-# def save
-#    persisted? ? update : insert
-# end
-
-
-
-# def self.find_by_name(name)
-#   sql = <<-SQL
-#     SELECT * FROM posts WHERE name = ? LIMIT 1
-#   SQL
-#
-#   results = DB[:conn].execute(sql, name).flatten
-#
-#   Post.new_from_db(results)
-# end
 
 end
